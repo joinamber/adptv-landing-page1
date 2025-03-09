@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Intelligence | AI-Powered ERP Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1a1aff;
+            --accent-green: #c4ff00;
+            --dark-text: #111;
+            --light-text: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-blue);
+            color: var(--light-text);
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -2rem;
+            left: 10%;
+            width: 80%;
+            height: 4rem;
+            background-color: var(--accent-green);
+            transform: rotate(-1deg);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 8rem 2rem;
+            background-color: #f8f8f8;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        
+        /* Problems Section - Updated for mobile optimization */
+        .problems {
+            padding: 8rem 2rem;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .problem-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .problem-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .problem-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .problem-item h3::before {
+            content: "✘";
+            color: var(--primary-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Solutions Section */
+        .solutions {
+            padding: 8rem 2rem;
+            background-color: var(--primary-blue);
+            color: var(--light-text);
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .solution-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .solution-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+        
+        .solution-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .solution-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .solution-card li::before {
+            content: "•";
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Applications Section */
+        .applications {
+            padding: 8rem 2rem;
+            background-color: #f8f8f8;
+        }
+        
+        .app-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--accent-green);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .app-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .app-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        
+        .app-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .app-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .app-card li::before {
+            content: "•";
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 8rem 2rem;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Quote Section */
+        .quote {
+            padding: 6rem 2rem;
+            background-color: var(--accent-green);
+            text-align: center;
+        }
+        
+        .quote-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary-blue);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quote-author {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .app-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quote-text {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AI Transforming ERP Systems</h1>
+            <p>Reimagining enterprise resource planning from first principles with adaptive intelligence</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">How AI Changes the Game</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Cost Reduction</h3>
+                    <p>Significant cost reduction in building and shipping software</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Proactive AI Agents</h3>
+                    <p>AI agents can proactively identify opportunities and risks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Industry-Specific Intelligence</h3>
+                    <p>Vertical-specific AI models can encode industry best practices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problems Section - Redesigned for mobile optimization -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">The Problems with Traditional ERP</h2>
+            <div class="problems-grid">
+                <div class="problem-item">
+                    <h3>Legacy Systems</h3>
+                    <p>The ERP market is massive ($55B+) but dominated by legacy systems designed before the AI revolution</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Complex & Rigid</h3>
+                    <p>Traditional ERPs are complex, rigid, and often fail to deliver on promises of efficiency</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Implementation Failures</h3>
+                    <p>Implementation failures and massive cost overruns are common</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Siloed Data</h3>
+                    <p>Data often remains siloed despite promises of integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container">
+            <h2 class="section-title">Core AI Technologies Transforming ERP</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>Foundation Models Integration</h3>
+                    <ul>
+                        <li>Natural language UI</li>
+                        <li>Conversational prompts</li>
+                        <li>Contextual recommendations</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3>AI Agents & Orchestration</h3>
+                    <ul>
+                        <li>Autonomous workflow</li>
+                        <li>Dynamic adaptation</li>
+                        <li>Cross-system coordination</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3>Knowledge Graph Technologies</h3>
+                    <ul>
+                        <li>Semantic data integration</li>
+                        <li>Causal reasoning capabilities</li>
+                        <li>Institutional knowledge capture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Applications Section -->
+    <section class="applications">
+        <div class="container">
+            <h2 class="section-title">Key Areas of Transformation</h2>
+            <div class="app-tabs">
+                <button class="tab-btn active" data-tab="finance">Banking & Finance</button>
+                <button class="tab-btn" data-tab="ecommerce">Ecommerce Operations</button>
+                <button class="tab-btn" data-tab="logistics">Logistics & Supply Chain</button>
+            </div>
+            
+            <div class="tab-content active" id="finance">
+                <div class="app-card">
+                    <h3>Intelligent Financial Close</h3>
+                    <ul>
+                        <li>Auto-reconciliation</li>
+                        <li>Reduction in manual matching tasks</li>
+                        <li>Faster close cycles</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Treasury & Cash Management</h3>
+                    <ul>
+                        <li>Dynamic cash flow forecasting</li>
+                        <li>Lower short-term borrowing costs</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Regulatory Compliance</h3>
+                    <ul>
+                        <li>Continuous monitoring</li>
+                        <li>Automatically identifies affected processes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="ecommerce">
+                <div class="app-card">
+                    <h3>Intelligent Product Catalog</h3>
+                    <ul>
+                        <li>Auto product classification</li>
+                        <li>Improve search relevancy</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Customer Service Automation</h3>
+                    <ul>
+                        <li>Full context awareness</li>
+                        <li>Reduction in manual ticket handling</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Return Processing</h3>
+                    <ul>
+                        <li>Return classification</li>
+                        <li>Authenticity verification</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="logistics">
+                <div class="app-card">
+                    <h3>Demand Sensing & Forecasting</h3>
+                    <ul>
+                        <li>Unstructured market signals</li>
+                        <li>Visual data analysis</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Intelligent Inventory Optimization</h3>
+                    <ul>
+                        <li>Understand supply constraints</li>
+                        <li>Initiate procurement actions</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Supply Chain Risk Management</h3>
+                    <ul>
+                        <li>Monitor supply chain vulnerabilities</li>
+                        <li>Recommend optimal approaches</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quote Section -->
+    <section class="quote">
+        <div class="container">
+            <p class="quote-text">"The best way to predict the future is to invent it."</p>
+            <p class="quote-author">- Alan Kay</p>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your ERP Experience?</h2>
+            <p>Join us in reimagining enterprise systems with AI at their core.</p>
+            <a href="mailto:amber@adptv.xyz" class="btn">Contact Us</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Adaptive Intelligence. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/adptvai" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/goadptv" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:amber@adptv.xyz" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
